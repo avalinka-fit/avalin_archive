@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив Avalinka</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="favicon-32x32.png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <header class="glavHeader">
+        <nav class="glavNav">
+            <a href=""><div><i class="fas fa-users"></i> Кружки</div></a>
+            <a href=""><div><i class="fas fa-camera"></i> Фото</div></a>
+            <a href=""><div><i class="fas fa-video"></i> Видео</div></a>
+            <a href=""><div><i class="fas fa-info-circle"></i> О нас</div></a>
+            <a href=""><div><i class="fas fa-envelope"></i> Контакты</div></a>
+            
+            <!-- Добавленные иконки соцсетей в шапку -->
+            <div class="header-social">
+                <a href="https://www.tiktok.com/@avalinka_tt"><i class="fab fa-tiktok"></i></a>
+                <a href="https://t.me/loginlon"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/id657010201?from=search"><i class="fab fa-vk"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="content">
+            <h1 class="main-title">Добро пожаловать в архив Avalinka</h1>
+            <div class="intro-text">
+                <h2 class="subtitle">Здесь вы сможете увидеть жизнь брянковского морпеха</h2>
+            </div>
+            
+            <!-- Блок 1: Текст слева, видео справа -->
+            <a href="">
+                <div class="media-block">
+                        <div class="text-content">
+                            <h3>Интересные кружки, которые не всегда знаешь чем закончатся</h3>
+                        </div>
+                        <div class="media-content">
+                        <video autoplay muted loop playsinline>
+                            <source src="video.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Блок 2: Фото слева, текст справа -->
+            <a href="">
+                <div class="media-blockс">
+                    <div class="text-content">
+                        <h3>Прекрасные фото с лучшими пейзажами и незабываемыми историями</h3>
+                    </div><div class="media-content">
+                        <img src="photo_2025-08-07_00-11-40.jpg" alt="Фото с кружка">
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Блок 3: Текст слева, видео справа -->
+            <a href="">
+                <div class="media-block">
+                    <div class="text-content">
+                        <h3>Увлекательные видео с лучшими кадрами и ещё более прекрасными людьми</h3>
+                    </div>
+                    <div class="media-content">
+                        <video autoplay muted loop playsinline>
+                            <source src="IMG_3880.MP4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Архив Avalinka. Все права защищены.</p>
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@avalinka_tt"><i class="fab fa-tiktok"></i></a>
+                <a href="https://t.me/loginlon"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/id657010201?from=search"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video[autoplay]');
+            videos.forEach(video => {
+                video.play().catch(e => {
+                    const playButton = document.createElement('button');
+                    playButton.innerHTML = '▶ Воспроизвести видео';
+                    playButton.className = 'video-play-button';
+                    video.parentNode.insertBefore(playButton, video.nextSibling);
+                    
+                    playButton.addEventListener('click', function() {
+                        video.play();
+                        playButton.style.display = 'none';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

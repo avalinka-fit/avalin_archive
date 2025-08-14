@@ -1,0 +1,306 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #f9f0ff, #f3e5f5, #e1bee7, #ce93d8);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glavHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    color: #5d1049;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.glavNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.glavNav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.glavNav div {
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    margin: 5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: #5d1049;
+}
+
+.glavNav div i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.glavNav div:hover {
+    background-color: #e1bee7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    color: #4a148c;
+}
+
+/* Новые стили для иконок соцсетей в шапке */
+.header-social {
+    display: flex;
+    margin-left: auto;
+    padding: 0 20px;
+}
+
+.header-social a {
+    color: #5d1049;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.header-social a:hover {
+    color: #4a148c;
+    transform: translateY(-2px);
+}
+
+.main-content {
+    padding-top: 90px;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-title {
+    text-align: center;
+    color: #4a148c;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    text-align: center;
+    color: #7b1fa2;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.media-block {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.media-block:hover {
+    transform: translateY(-5px);
+}
+
+.media-blockс {
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.media-content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.media-content video,
+.media-content img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Подвал */
+footer {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    color: #5d1049;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #7b1fa2;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4a148c;
+    transform: translateY(-3px);
+}
+
+/* Кнопка воспроизведения видео */
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    background: rgba(206, 121, 202, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.video-play-button:hover {
+    background: rgba(207, 102, 202, 0.9);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .glavNav {
+        padding: 10px;
+    }
+    
+    .glavNav div {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .header-social {
+        padding: 0 10px;
+    }
+    
+    .header-social a {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .media-block,
+    .media-blockс {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-content,
+    .media-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .glavNav div {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .header-social a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+    
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
